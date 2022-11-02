@@ -29,16 +29,32 @@
 }
 
 
+:root {
+    --color3: rgb(60, 64, 72);
+    --color4: rgb(235, 235, 235);
+    --color5: rgb(43, 72, 101);
+}
+
 /*-------------------------------*/
 
 
 p, h1, h2, h3, h4, h5, h6 {
-	margin-top: 0px;
-	margin-bottom: 0px;
+	margin: 0px;
 }
 
-h1, h2, h3 {
-	font-family: OpenSans-Bold;
+
+h1 {
+    font-family: MontHeavy;
+    font-size: 3em;
+}
+
+h2 {
+    font-family: MontHeavy;
+    font-size: 2em;
+}
+
+h3 {
+    font-family: OpenSans-Bold;
 }
 
 ul {
@@ -50,7 +66,7 @@ strong {
 	font-family: OpenSans-Bold;
 }
 
-a:link {
+a:link, a:visited {
 	color: black;
 	text-decoration: none;
 }
@@ -59,18 +75,21 @@ a:hover {
 	text-decoration: underline;
 }
 
-a:visited {
-	color: black;
-	text-decoration: none;
+img {
+    max-width: 100%;
+    height: auto;
 }
 
+.pagefoot, .pagefoot a, .pagefoot a:link, .pagefoot a:visited, .menu, .menu a, .menu a:link, menu a:visited {
+    color: var(--color4);
+}
 
 /*-------------------------------*/
 
 
 body {
 	font-family: OpenSans;
-	background-color: rgba(253, 246, 236, 1.0);
+	background-color: rgb(234, 234, 234);
 	margin: 0px;
 	margin-top: 4vh;
 	padding: 0px;
@@ -81,11 +100,12 @@ body {
 
 
 .menu {
-	background-color: rgb(244, 229, 205);
+	background-color: var(--color3);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	height: 4vh;
+    min-height: 40px;
 	position: fixed;
 	top: 0;
 	width: 100%;
@@ -93,6 +113,7 @@ body {
 
 nav {
 	width: 37%;
+    min-width: 550px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -114,62 +135,50 @@ nav {
 
 .pagehead
 {
-	background: url(images/yosemite.jpg);
+	background-color: rgb(43, 72, 101);
 	background-position: center;
+    color: white;
 	height: 22vh;
+    min-height: 220px;
 	display: flex;
 	justify-content: center;
-	align-items: center;
 }
 
 header {
-	width: 34%;
-	height: 8vh;
-	background-color: rgba(244, 229, 205, 0.7);
-	padding: 2%;
-	border: 1px solid black;
-	display: flex;
-	justify-items: column;
-	align-items: center;
-
+	width: 30%;
+    min-width: 450px;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+    text-align: justify;
 }
 
 
 /*-------------------------------*/
 
 
-.corps {
-	display: flex;
-	flex-wrap: wrap;
-	margin: auto;
-	width: 38%;
-	height: 100%;
-}
-
 .corps a:hover {
 	text-decoration: none;
 }
 
-.article {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	padding: 3px;
-	border: 1px solid black;
+.sectiondesc:hover {
+    background-color: rgb(202, 202, 202);
 }
 
-.article:hover {
-	background-color: rgb(243, 233, 221);
+.section {
+    width: 100%;
+    height: 58vh;
+    min-height: 580px;
+    display: flex;
 }
 
-.article .texte {
-	margin: 15px;
+.sectionimg, .sectiondesc {
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
-.article h2 {
-	margin-top: -2%;
+.sectioncontent {
+    padding: 10%;
 }
 
 
@@ -177,7 +186,7 @@ header {
 
 
 .pagefoot {
-	background-color: rgb(244, 229, 205);
+	background-color: var(--color3);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -185,14 +194,13 @@ header {
 }
 
 footer {
-	width: 38%;
+	width: 38vw;
+    min-width: 550px;
 	padding: 3px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-}
-footer {
-	font-size: small;
+    font-size: small;
 }
 
 footer h3 {
@@ -205,6 +213,7 @@ footer li {
 
 #footernav {
 	text-align: right;
+    color: var(--color4);
 }
 
 #amour {
